@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Búsqueda</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Buscar Datos</h1>
+        <div class="search-container">
+            <label for="searchType">Buscar por:</label>
+            <select id="searchType">
+                <option value="nut">NUT</option>
+                <option value="nombre">Nombre</option>
+            </select>
+            
+            <input type="text" id="searchQuery" placeholder="Ingrese cédula o nombre..." />
+            <button onclick="searchData()">Buscar</button>
+        </div>
+        
+        <div id="result">
+            <h2>Resultados de la Búsqueda:</h2> 
+            <h2 id="searchText"></h2>
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>nut</th>
+                        <th>nombre</th>
+                        <th>fecha_1</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los datos se llenarán dinámicamente aquí -->
+                </tbody>
+            </table>
+            <pre id="resultData">
+            </pre>
+            <div id="detailBox" class="detail-box hidden">
+                <div id="detailContent" class="detail-grid">
+                  <!-- Aquí se inyectan los detalles de la persona -->
+                </div>
+              </div>
+              
+            
+        </div>
+        
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
